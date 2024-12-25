@@ -4,7 +4,5 @@ except:
     print('Please enter an invalid number')
     exit()
 
-table_range = list(range(1,11))
-
-for n in table_range:
+for n in range(1, 11):
     print(f'{number} * {n} = {number * n}')
