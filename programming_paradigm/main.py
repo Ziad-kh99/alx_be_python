@@ -1,17 +1,44 @@
-import sys 
-from robust_division_calculator import safe_division
+# Robust Division Calc:
+# import sys 
+# from robust_division_calculator import safe_division
 
+
+# def main():
+#     if len(sys.argv) != 3:
+#         print('Usage: python main.py <numerator> <denominator>')
+#         sys.exit(1)
+    
+#     numerator = sys.argv[1]
+#     denominator = sys.argv[2]
+
+#     result = safe_division(numerator, denominator)
+#     print(result)
+
+##################################################################33
+
+# Library Management System:
+from library_management import Book, Library
 
 def main():
-    if len(sys.argv) != 3:
-        print('Usage: python main.py <numerator> <denominator>')
-        sys.exit(1)
-    
-    numerator = sys.argv[1]
-    denominator = sys.argv[2]
+    # Setup a small library
+    library = Library()
+    library.add_book(Book("Brave New World", "Aldous Huxley"))
+    library.add_book(Book("1984", "George Orwell"))
 
-    result = safe_division(numerator, denominator)
-    print(result)
+    # Initial list of available books
+    print("Available books after setup:")
+    library.list_available_books()
+
+    # Simulate checking out a book
+    library.check_out_book("1984")
+    # library.check_out_book("Brave New World")
+    print("\nAvailable books after checking out '1984':")
+    library.list_available_books()
+
+    # # Simulate returning a book
+    library.return_book("1984")
+    print("\nAvailable books after returning '1984':")
+    library.list_available_books()
 
 
 if __name__ == '__main__':
