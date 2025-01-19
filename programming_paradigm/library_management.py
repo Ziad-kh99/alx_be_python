@@ -42,6 +42,9 @@ class Library:
         else:
             print('This book doesn\'t exist')
 
+    def return_book(self):
+        pass
+
     def list_available_books(self):
         for book in self._books:
             if not book._is_checked_out:
